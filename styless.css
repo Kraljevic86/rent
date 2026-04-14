@@ -263,9 +263,7 @@
         padding: 20px 200px;
     }
 
-    .howtorent img:nth-child(2) {
-        margin-top: -300px;
-    }
+  
     .container .uslovi-koriscenja {
         display: flex;
         flex-direction: column;
@@ -278,7 +276,7 @@
         color: floralwhite;
         text-decoration: none;
         padding-bottom: 50px;
-    }
+    }   
     .uslovi-section {
         display: flex;
         flex-direction: column;
@@ -415,6 +413,11 @@
 
     /* ── RESPONSIVE — mali mobilni (do 480px) ──────── */
     @media (max-width: 480px) {
+        .nav-logo {
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
         .menu {
             flex-direction: column;
             height: auto;
@@ -553,6 +556,10 @@
 
     /* ── RESPONSIVE — tablet (769px – 1024px) ───────── */
     @media (min-width: 769px) and (max-width: 1024px) {
+        .howtorent img:nth-child(2) {
+            margin-top: 0;
+        }
+
         .menu {
             flex-direction: row;
             height: calc(100vh - var(--nav-height));
