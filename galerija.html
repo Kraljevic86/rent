@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <title>PHOTO-RENT</title>
+    <link rel="stylesheet" href="styless.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo active"><span>Rent </span>Canon G7X Mark II</a>
+
+        <!-- Linkovi (desktop) -->
+        <nav>
+            <a href="#oprema" class="active">Oprema</a>
+            <a href="usluge.html">Usluge</a>
+            <a href="galerija.html">Galerija</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+
+        <!-- Dugme za rezervaciju (desktop) -->
+        <a href="https://www.instagram.com/rentcanon.nis?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn-rezervisi desktop-btn">Rezerviši</a>
+
+        <!-- Hamburger dugme (mobilni) -->
+        <button class="hamburger" id="hamburger" aria-label="Otvori meni">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        </div>
+
+        <!-- Mobilni meni -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#oprema">Oprema</a>
+            <a href="usluge.html">Usluge</a>
+            <a href="galerija.html">Galerija</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="https://www.instagram.com/rentcanon.nis?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="mobile-rezervisi">Rezerviši</a>
+        </div>
+    </header>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+        });
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                mobileNav.classList.remove('open');
+            });
+        });
+    </script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact">
+                <span class="footer-label">Kontakt</span>
+                <a href="tel:+381XXXXXXXXX" class="footer-phone">+381 XX XXX XXXX</a>
+            </div>
+            <a href="https://www.instagram.com/rentcanon.nis?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="footer-ig" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
