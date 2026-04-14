@@ -47,21 +47,18 @@
             <a href="https://www.instagram.com/rentcanon.nis?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="mobile-rezervisi">Rezerviši</a>
         </div>
     </header>
-
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.getElementById('mobileNav');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('open');
-            mobileNav.classList.toggle('open');
-        });
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('open');
-                mobileNav.classList.remove('open');
-            });
-        });
-    </script>
+    <main>
+        <section class="gallery-section">
+            <h1 class="gallery-title">Galerija</h1>
+            <div class="gallery-grid">
+                <img src="galerija/1.jpg" alt="Fotografija 1" class="gallery-item">
+                <img src="galerija/2.jpg" alt="Fotografija 2" class="gallery-item">
+                <img src="galerija/3.jpg" alt="Fotografija 3" class="gallery-item">
+                <img src="galerija/4.jpg" alt="Fotografija 4" class="gallery-item">
+                <img src="galerija/5.jpg" alt="Fotografija 5" class="gallery-item">
+                <img src="galerija/6.jpg" alt="Fotografija 6" class="gallery-item">
+            </div>
+        </section>
 
     <footer>
         <div class="footer-container">
@@ -78,5 +75,19 @@
             </a>
         </div>
     </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+        });
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                mobileNav.classList.remove('open');
+            });
+        });
+    </script>
 </body>
 </html>
